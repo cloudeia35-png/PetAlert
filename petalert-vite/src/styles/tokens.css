@@ -1,0 +1,45 @@
+/* =====================================================================
+   PETALERT · ESTILOS
+   1. Tokens   2. Base   3. HUD y progreso   4. Tarjetas y botones
+   5. Pantallas (inicio, hub, tamaños, libro, quiz, cierre)   6. Controles
+   Para cambiar la paleta basta con editar los tokens de :root.
+   ===================================================================== */
+
+/* ---------- 1. TOKENS ---------- */
+:root{
+  color-scheme: light dark;
+  --sky:#4a8bdd; --cyan:#6fd6f0; --ice:#c9dbff; --aqua:#9cc9cc;
+  --honey:#ffc24d; --coral:#ff7a66; --ok:#2fa38a;
+  --text:#14305e; --text2:#48628f;
+  --glass:rgba(247,251,255,.80); --glass-line:rgba(255,255,255,.8);
+  --btn:#14305e; --btn-text:#ffffff; --chip:rgba(20,48,94,.08);
+  --bg1:#bfe0ff; --bg2:#e6f1ff; --bg3:#f6efe2;
+  --show1:#f7fbff; --show2:#bcd3ff;
+  --shadow:0 26px 60px -26px rgba(20,48,94,.5);
+  --font-display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --font-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --hudh:98px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --text:#eaf2ff; --text2:#b4c7ec;
+    --glass:rgba(15,34,74,.80); --glass-line:rgba(130,170,240,.30);
+    --btn:#eaf2ff; --btn-text:#14305e; --chip:rgba(234,242,255,.12);
+    --bg1:#1b3f7a; --bg2:#24508f; --bg3:#2f5f92;
+    --show1:#2b4f8f; --show2:#132b58;
+    --shadow:0 26px 60px -26px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --text:#eaf2ff; --text2:#b4c7ec;
+  --glass:rgba(15,34,74,.80); --glass-line:rgba(130,170,240,.30);
+  --btn:#eaf2ff; --btn-text:#14305e; --chip:rgba(234,242,255,.12);
+  --bg1:#1b3f7a; --bg2:#24508f; --bg3:#2f5f92;
+  --show1:#2b4f8f; --show2:#132b58;
+  --shadow:0 26px 60px -26px rgba(0,0,0,.7);
+}
+
+/* ---------- 2. BASE ---------- */

@@ -1,0 +1,10 @@
+/* Orden de carga = orden de la cascada */
+@import './tokens.css';
+@import './base.css';
+@import './hud.css';
+@import './components.css';
+@import './screens.css';
+@import './guide.css';
+@import './finale.css';
+@import './controls.css';
+@import './loader.css';

@@ -1,0 +1,11 @@
+#loader{position:fixed;inset:0;z-index:30;display:grid;place-items:center;background:linear-gradient(180deg,var(--bg1),var(--bg2));transition:opacity .7s ease}
+#loader.out{opacity:0;pointer-events:none}
+#loader .box{width:min(360px,80vw);text-align:center}
+#loader .logo{font-size:40px;margin-bottom:22px;display:block}
+#loader .bar{height:16px;border-radius:999px;background:var(--chip);overflow:hidden;box-shadow:inset 0 0 0 2px rgba(20,48,94,.15)}
+#loader .bar i{display:block;height:100%;width:0;border-radius:999px;background:var(--text);transition:width .25s ease}
+#loader p{margin-top:12px;color:var(--text2);font-size:15px}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

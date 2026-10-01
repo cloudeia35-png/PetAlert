@@ -1,0 +1,7 @@
+#stick{position:fixed;z-index:6;left:24px;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);width:128px;height:128px;border-radius:50%;background:var(--glass);border:1px solid var(--glass-line);touch-action:none}
+#stick i{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px;border-radius:50%;background:var(--btn);opacity:.85}
+#coverBtn{position:fixed;z-index:6;right:24px;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);padding:16px 22px;border-radius:999px;background:var(--coral);color:#fff;font-weight:700;font-size:17px;box-shadow:0 16px 30px -14px rgba(255,80,60,.9);touch-action:none}
+#coverBtn small{display:block;font-size:11.5px;font-weight:600;opacity:.9}
+#coverBtn.held{background:var(--ok)}
+
+/* ---------- Carga ---------- */

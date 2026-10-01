@@ -1,0 +1,44 @@
+.fin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:calc(var(--hudh) + 8px) 16px 0;color:#fff;text-shadow:0 4px 26px rgba(20,30,80,.55)}
+.fin .kick{font-weight:700;letter-spacing:.32em;text-transform:uppercase;font-size:13px;opacity:0;animation:finUp .9s ease .5s forwards}
+.fin .words{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 22px;margin:8px 0 10px}
+.fin .w{font:800 clamp(44px,9vw,104px)/1 var(--font-display);letter-spacing:-.03em;opacity:0;filter:blur(14px);animation:finWord 1s cubic-bezier(.2,.8,.2,1) forwards}
+.fin .w:nth-child(1){animation-delay:1.1s}.fin .w:nth-child(2){animation-delay:2.2s}.fin .w:nth-child(3){animation-delay:3.3s;color:#ffd27a}
+.fin .line{max-width:min(620px,92vw);font-size:clamp(16px,2vw,21px);line-height:1.4;opacity:0;animation:finUp 1s ease 4.7s forwards}
+.fin .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px;list-style:none;max-width:min(760px,94vw)}
+.fin .chips li{display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-weight:600;font-size:13.5px;text-shadow:none;opacity:0;animation:finUp .6s ease forwards}
+.fin .chips li svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.fin .chips li:nth-child(1){animation-delay:5.4s}.fin .chips li:nth-child(2){animation-delay:5.6s}.fin .chips li:nth-child(3){animation-delay:5.8s}.fin .chips li:nth-child(4){animation-delay:6s}.fin .chips li:nth-child(5){animation-delay:6.2s}
+.fin .cta{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 30px);transform:translateX(-50%);opacity:0;animation:finUp .8s ease 6.8s forwards;text-shadow:none}
+@keyframes finUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes finWord{from{opacity:0;filter:blur(14px);transform:translateY(34px) scale(.9)}to{opacity:1;filter:blur(0);transform:none}}
+.fin .cta{animation-name:finUpC}
+@keyframes finUpC{from{opacity:0;transform:translate(-50%,22px)}to{opacity:1;transform:translate(-50%,0)}}
+#flash{position:fixed;inset:0;z-index:39;background:#fff;opacity:0;pointer-events:none}
+#flash.on{animation:flashA 1.6s ease-out}
+@keyframes flashA{0%{opacity:.95}100%{opacity:0}}
+#bg i[data-bg=dawn]{background:linear-gradient(180deg,#1b3a78 0%,#5b7fd0 34%,#f2a98f 72%,#ffd9a0 100%)}
+.about.dawn{left:50%;top:calc(var(--hudh) + 14px);transform:translateX(-50%);background:rgba(20,40,90,.42);border-color:rgba(255,255,255,.35);color:#fff}
+.about.dawn p{color:rgba(255,255,255,.88)}
+.about.dawn .logo-c{background:linear-gradient(135deg,#ffc24d,#ff7a66)}
+.about.dawn .btn{background:#fff;color:#14305e}
+
+/* Transición de reinicio: ondas sísmicas + iris */
+#wipe{position:fixed;inset:0;z-index:45;pointer-events:none;--x:50%;--y:50%;visibility:hidden}
+#wipe.on{visibility:visible;pointer-events:auto}
+#wipe .ring{position:absolute;left:var(--x);top:var(--y);width:0;height:0;border:5px solid #ff7a66;border-radius:50%;transform:translate(-50%,-50%);opacity:0}
+#wipe.go .ring{animation:ripple 1.5s cubic-bezier(.2,.6,.3,1) forwards}
+#wipe.go .ring.r2{animation-delay:.18s;border-color:#6fd6f0}
+#wipe.go .ring.r3{animation-delay:.36s;border-color:#ffc24d}
+@keyframes ripple{0%{width:0;height:0;opacity:.95}100%{width:340vmax;height:340vmax;opacity:0}}
+#wipe .iris{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,#2ea6ff 0%,#4a8bdd 38%,#14305e 100%);clip-path:circle(0 at var(--x) var(--y))}
+#wipe.go .iris{clip-path:circle(160vmax at var(--x) var(--y));transition:clip-path 1s cubic-bezier(.7,0,.25,1) .4s}
+#wipe.open .iris{clip-path:circle(0 at 50% 50%);transition:clip-path 1.1s cubic-bezier(.65,0,.2,1)}
+#wipe .mark{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:14px;color:#fff;opacity:0;transition:opacity .4s ease}
+#wipe .mark .logo{font-size:clamp(34px,6vw,58px);color:#fff}
+#wipe .mark svg{width:min(340px,70vw);height:60px;overflow:visible}
+#wipe .mark path{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420}
+#wipe.hold .mark{opacity:1}
+#wipe.hold .mark path{animation:drawL 1.1s ease forwards}
+@keyframes drawL{to{stroke-dashoffset:0}}
+
+/* ---------- 6. CONTROLES ---------- */
