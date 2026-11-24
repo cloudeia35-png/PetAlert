@@ -25,7 +25,7 @@
 
   .card {
     flex-direction: column;
-    width: 440px;
+    width: 520px;
     padding-top: 24px;
     padding-left: 28px;
     padding-right: 28px;
@@ -56,6 +56,19 @@
     color: #3b5683;
     font-size: 20px;
     line-height: 27px;
+  }
+
+  .round {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    border-width: 2px;
+    border-color: #14305e;
+    background-color: #dcebfb;
+    cursor: pointer;
   }
 
   .row {
@@ -110,9 +123,8 @@
   <span id="st-title" class="title">Kit de emergencia</span>
   <span id="st-text" class="text">Toca un objeto para ver para qué sirve.</span>
   <div class="row">
-    <div id="btn-move" class="btn ghost">
-      <Move width="20" height="20" color="#14305e"></Move>
-      <span class="ghost-label">Mover</span>
+    <div id="btn-move" class="round">
+      <Move width="22" height="22" color="#14305e"></Move>
     </div>
     <div id="btn-skip" class="btn ghost" style="display: none">
       <span class="ghost-label">Saltar</span>

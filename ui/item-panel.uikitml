@@ -112,7 +112,7 @@
     <span id="it-name" class="title">Agua potable</span>
   </div>
   <span id="it-text" class="text">Para qué sirve.</span>
-  <div class="hint">
+  <div id="it-hint-row" class="hint">
     <PackagePlus width="22" height="22" color="#ff7a66"></PackagePlus>
     <span id="it-hint" class="hint-text">Llévalo al maletín y suéltalo para guardarlo.</span>
   </div>

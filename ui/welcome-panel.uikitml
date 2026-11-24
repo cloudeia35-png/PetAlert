@@ -2,7 +2,8 @@
   Bienvenida DENTRO de AR (aparece en el espacio real despues del logo animado: src/estaciones/intro-screen.js).
   Estilo de las tarjetas del proyecto anterior (Pet Alert, css/04-tooltip.css): azul clarito, borde blanco, etiqueta en
   coral, titulo en Varela Round azul marino, texto en Barlow y boton en pildora azul marino. Viñetas con punto coral.
-    welcome-start  boton COMENZAR (se toca con el dedo indice). Iconos Lucide: ArrowRight, FastForward.
+    (el boton para empezar ya no esta aqui: va SOBRE EL KIT, panel kit-boton-panel, "ORDENAR EL KIT")
+    Iconos Lucide: Eye, FastForward.
     welcome-skip   boton IR AL SIMULACRO: salta el kit y el rastreo (src/estaciones/intro-screen.js).
 -->
 <style>
@@ -35,6 +36,25 @@
     border-color: #ffffff;
     background-color: #dcebfb;
     font-family: Barlow;
+  }
+
+  .head {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .round {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    border-width: 2px;
+    border-color: #14305e;
+    background-color: #dcebfb;
+    cursor: pointer;
   }
 
   .num {
@@ -134,18 +154,10 @@
   }
 </style>
 <div class="card">
-  <span class="num">SIMULACRO PETALERT</span>
+  <div class="head"><span class="num">SIMULACRO PETALERT</span><div id="move-welcome" class="round"><Move width="22" height="22" color="#14305e"></Move></div></div>
   <span class="title">Cuida a tus mascotas</span>
-  <span class="text">Prepárate para proteger a tu perro y a tu gato antes de un sismo, aquí, en tu propio espacio. Todo se hace con tus manos.</span>
-  <div class="list">
-    <div class="item"><div class="dot"></div><span class="item-text">Primero, el kit: toca los objetos de la mesa, tómalos con la pinza y guárdalos en el maletín.</span></div>
-    <div class="item"><div class="dot"></div><span class="item-text">Después, el rastreo: acércate a Cacao y a Nube en el sofá y conoce su collar y su microchip.</span></div>
-    <div class="item"><div class="dot"></div><span class="item-text">Al final, el simulacro de sismo: búscalas y prepara el kit a tiempo.</span></div>
-  </div>
-  <div id="welcome-start" class="btn">
-    <span class="btn-label">COMENZAR</span>
-    <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
-  </div>
+  <span class="text">Protege a Cacao y a Nube antes, durante y después de un sismo. Todo con tus manos.</span>
+  <div class="item"><Eye width="26" height="26" color="#ff7a66"></Eye><span class="item-text">Mira el kit sobre la mesa y toca el botón ORDENAR EL KIT.</span></div>
   <div id="welcome-skip" class="btn-skip">
     <span class="btn-skip-label">SALTAR AL SIMULACRO</span>
     <FastForward width="20" height="20" color="#14305e"></FastForward>

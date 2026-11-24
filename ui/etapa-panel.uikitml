@@ -36,6 +36,25 @@
     font-family: Barlow;
   }
 
+  .head {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .round {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    border-width: 2px;
+    border-color: #14305e;
+    background-color: #dcebfb;
+    cursor: pointer;
+  }
+
   .num {
     color: #ff7a66;
     font-size: 15px;
@@ -108,7 +127,7 @@
   }
 </style>
 <div class="card">
-  <span id="et-kick" class="num">ETAPA 2 · RASTREO</span>
+  <div class="head"><span id="et-kick" class="num">ETAPA 2 · RASTREO</span><div id="move-etapa" class="round"><Move width="22" height="22" color="#14305e"></Move></div></div>
   <span id="et-title" class="title">¿Y si tu mascota se pierde?</span>
   <span id="et-text" class="text">Con el susto de un sismo, un perro o un gato puede escaparse. Su placa, su rastreador y su microchip ayudan a encontrarlo rápido.</span>
   <div class="list">

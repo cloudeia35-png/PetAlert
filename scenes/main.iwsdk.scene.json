@@ -210,6 +210,26 @@
       }
     },
     {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "kit-boton-panel",
+        "type": "asset"
+      },
+      "id": "kit-boton-panel",
+      "name": "Boton ORDENAR EL KIT",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
       "content": {
         "asset": "hint-panel",
         "type": "asset"

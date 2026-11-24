@@ -1,0 +1,65 @@
+<!--
+  Boton sobre el kit (src/estaciones/intro-screen.js): despues del logo y la bienvenida, la persona mira el kit sobre la mesa y
+  toca ORDENAR EL KIT para empezar. Mismo estilo que los demas cuadros (azul clarito, borde blanco, boton coral).
+    kit-ordenar  boton ORDENAR EL KIT (se toca con el dedo indice). Iconos Lucide: ArrowRight.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 14px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 380px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 34px;
+    background-color: #ff7a66;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #f2604a;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+</style>
+<div class="card">
+  <span class="num">TU KIT DE EMERGENCIA</span>
+  <div id="kit-ordenar" class="btn">
+    <span class="btn-label">ORDENAR EL KIT</span>
+    <ArrowRight width="26" height="26" color="#ffffff"></ArrowRight>
+  </div>
+</div>
