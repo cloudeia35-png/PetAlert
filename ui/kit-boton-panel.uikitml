@@ -59,7 +59,7 @@
 <div class="card">
   <span class="num">TU KIT DE EMERGENCIA</span>
   <div id="kit-ordenar" class="btn">
-    <span class="btn-label">ORDENAR EL KIT</span>
+    <span class="btn-label">ordenar el kit</span>
     <ArrowRight width="26" height="26" color="#ffffff"></ArrowRight>
   </div>
 </div>
