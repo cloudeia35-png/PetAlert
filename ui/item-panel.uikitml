@@ -1,0 +1,119 @@
+<!--
+  Ficha de un objeto del kit (src/estaciones/kit-objetos.js la llena y la lleva junto al objeto mientras esta en la mano).
+  Mismo estilo que la tarjeta del kit del proyecto anterior (Pet Alert, css/04-tooltip.css + content.js):
+    it-num   "1 / 6" en coral       ico-*   icono del objeto en un cuadro azul (se muestra solo el que toca)
+    it-name  titulo                  it-text para que sirve
+    it-hint  indicacion (NO es boton): se guarda llevando el objeto al maletin con la mano y soltandolo
+  Iconos Lucide: Utensils, FileText, Heart, Droplet, Cross, PawPrint, PackagePlus.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .card {
+    flex-direction: column;
+    width: 400px;
+    padding-top: 24px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 24px;
+    gap: 10px;
+    border-radius: 26px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .ttl {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .ico {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: #4a8bdd;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 28px;
+    line-height: 34px;
+    flex-shrink: 1;
+  }
+
+  .text {
+    color: #3b5683;
+    font-size: 19px;
+    line-height: 27px;
+  }
+
+  .hint {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 18px;
+    background-color: #ffffff;
+  }
+
+  .hint-text {
+    color: #14305e;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    flex-shrink: 1;
+  }
+</style>
+<div class="card">
+  <span id="it-num" class="num">1 / 6</span>
+  <div class="ttl">
+    <div class="ico">
+      <Utensils id="ico-food" width="30" height="30" color="#ffffff"></Utensils>
+      <FileText id="ico-doc" width="30" height="30" color="#ffffff" style="display: none"></FileText>
+      <Heart id="ico-heart" width="30" height="30" color="#ffffff" style="display: none"></Heart>
+      <Droplet id="ico-drop" width="30" height="30" color="#ffffff" style="display: none"></Droplet>
+      <Cross id="ico-cross" width="30" height="30" color="#ffffff" style="display: none"></Cross>
+      <PawPrint id="ico-paw" width="30" height="30" color="#ffffff" style="display: none"></PawPrint>
+      <MapPin id="ico-pin" width="30" height="30" color="#ffffff" style="display: none"></MapPin>
+      <Shield id="ico-shield" width="30" height="30" color="#ffffff" style="display: none"></Shield>
+    </div>
+    <span id="it-name" class="title">Agua potable</span>
+  </div>
+  <span id="it-text" class="text">Para qué sirve.</span>
+  <div class="hint">
+    <PackagePlus width="22" height="22" color="#ff7a66"></PackagePlus>
+    <span id="it-hint" class="hint-text">Llévalo al maletín y suéltalo para guardarlo.</span>
+  </div>
+</div>

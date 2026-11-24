@@ -1,0 +1,153 @@
+<!--
+  Bienvenida DENTRO de AR (aparece en el espacio real despues del logo animado: src/estaciones/intro-screen.js).
+  Estilo de las tarjetas del proyecto anterior (Pet Alert, css/04-tooltip.css): azul clarito, borde blanco, etiqueta en
+  coral, titulo en Varela Round azul marino, texto en Barlow y boton en pildora azul marino. Viñetas con punto coral.
+    welcome-start  boton COMENZAR (se toca con el dedo indice). Iconos Lucide: ArrowRight, FastForward.
+    welcome-skip   boton IR AL SIMULACRO: salta el kit y el rastreo (src/estaciones/intro-screen.js).
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .card {
+    flex-direction: column;
+    width: 460px;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 28px;
+    gap: 10px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .text {
+    color: #3b5683;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: #ff7a66;
+  }
+
+  .item-text {
+    color: #14305e;
+    font-size: 20px;
+    line-height: 26px;
+    flex-shrink: 1;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 32px;
+    background-color: #14305e;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #24508f;
+  }
+
+  .btn-skip {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 32px;
+    border-width: 2px;
+    border-color: #14305e;
+    background-color: #dcebfb;
+    cursor: pointer;
+  }
+
+  .btn-skip:hover {
+    background-color: #c4dcf6;
+  }
+
+  .btn-skip-label {
+    color: #14305e;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+</style>
+<div class="card">
+  <span class="num">SIMULACRO PETALERT</span>
+  <span class="title">Cuida a tus mascotas</span>
+  <span class="text">Prepárate para proteger a tu perro y a tu gato antes de un sismo, aquí, en tu propio espacio. Todo se hace con tus manos.</span>
+  <div class="list">
+    <div class="item"><div class="dot"></div><span class="item-text">Primero, el kit: toca los objetos de la mesa, tómalos con la pinza y guárdalos en el maletín.</span></div>
+    <div class="item"><div class="dot"></div><span class="item-text">Después, el rastreo: acércate a Cacao y a Nube en el sofá y conoce su collar y su microchip.</span></div>
+    <div class="item"><div class="dot"></div><span class="item-text">Al final, el simulacro de sismo: búscalas y prepara el kit a tiempo.</span></div>
+  </div>
+  <div id="welcome-start" class="btn">
+    <span class="btn-label">COMENZAR</span>
+    <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
+  </div>
+  <div id="welcome-skip" class="btn-skip">
+    <span class="btn-skip-label">SALTAR AL SIMULACRO</span>
+    <FastForward width="20" height="20" color="#14305e"></FastForward>
+  </div>
+</div>

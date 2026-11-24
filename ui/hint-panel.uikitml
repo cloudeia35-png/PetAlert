@@ -1,0 +1,139 @@
+<!--
+  Indicaciones de la fase 2 (un solo mensaje visible a la vez; src/hints.js alterna cual):
+    msg-search  buscando el suelo       msg-found  suelo detectado
+    msg-hello   invitacion a agacharse   msg-pet    acariciando
+    msg-scan    el visor no tiene la sala escaneada (Space Setup)
+    msg-blocked el lugar mirado choca con una pared o un mueble real (blocked-sub cambia segun el motivo)
+    msg-station colocar una estacion (station-title cambia)   msg-station-ok  la estacion cabe: pellizcar para fijarla
+  Fuentes Barlow / Varela Round con tildes (ver src/fonts.js). Iconos Lucide: ScanSearch, Check, ChevronsDown, Heart,
+  ScanLine, TriangleAlert.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .panel-root {
+    flex-direction: column;
+    width: 430px;
+    border-radius: 24px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .msg {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .badge {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: #4a8bdd;
+  }
+
+  .badge-warn {
+    background-color: #ff7a66;
+  }
+
+  .text {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 4px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .sub {
+    color: #3b5683;
+    font-size: 19px;
+    line-height: 25px;
+  }
+</style>
+<div class="panel-root">
+  <div id="msg-search" class="msg">
+    <div class="badge"><ScanSearch width="36" height="36" color="#ffffff"></ScanSearch></div>
+    <div class="text">
+      <span class="title">Buscando el suelo</span>
+      <span class="sub">Mira hacia un espacio libre del piso.</span>
+    </div>
+  </div>
+  <div id="msg-scan" class="msg" style="display: none">
+    <div class="badge badge-warn"><ScanLine width="36" height="36" color="#ffffff"></ScanLine></div>
+    <div class="text">
+      <span class="title">Escanea tu espacio</span>
+      <span class="sub">El visor aún no conoce esta sala. Sal de la app y ve a Configuración &gt; Espacio físico &gt; Configuración del espacio. Luego vuelve a entrar.</span>
+    </div>
+  </div>
+  <div id="msg-blocked" class="msg" style="display: none">
+    <div class="badge badge-warn"><TriangleAlert width="36" height="36" color="#ffffff"></TriangleAlert></div>
+    <div class="text">
+      <span class="title">Aquí no caben</span>
+      <span id="blocked-sub" class="sub">Hay algo muy cerca. Busca un espacio libre en el piso.</span>
+    </div>
+  </div>
+  <div id="msg-found" class="msg" style="display: none">
+    <div class="badge"><Check width="36" height="36" color="#ffffff"></Check></div>
+    <div class="text">
+      <span class="title">¡Aquí caben!</span>
+      <span class="sub">Mantén la vista fija un momento.</span>
+    </div>
+  </div>
+  <div id="msg-station" class="msg" style="display: none">
+    <div class="badge"><MapPin width="36" height="36" color="#ffffff"></MapPin></div>
+    <div class="text">
+      <span id="station-title" class="title">Coloca la estación 1</span>
+      <span class="sub">Mira hacia un espacio libre del piso.</span>
+    </div>
+  </div>
+  <div id="msg-station-ok" class="msg" style="display: none">
+    <div class="badge"><Check width="36" height="36" color="#ffffff"></Check></div>
+    <div class="text">
+      <span class="title">¡Aquí cabe!</span>
+      <span class="sub">Mantén la vista quieta un momento y aparecerá aquí.</span>
+    </div>
+  </div>
+  <div id="msg-hello" class="msg" style="display: none">
+    <div class="badge"><ChevronsDown width="36" height="36" color="#ffffff"></ChevronsDown></div>
+    <div class="text">
+      <span class="title">¡Hola!</span>
+      <span class="sub">Acércate y agáchate para acariciarnos.</span>
+    </div>
+  </div>
+  <div id="msg-pet" class="msg" style="display: none">
+    <div class="badge"><Heart width="36" height="36" color="#ffffff"></Heart></div>
+    <div class="text">
+      <span class="title">¡Qué rico!</span>
+      <span class="sub">Sigue acariciándonos.</span>
+    </div>
+  </div>
+</div>

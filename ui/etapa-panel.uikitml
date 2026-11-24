@@ -1,0 +1,123 @@
+<!--
+  Cuadro de transicion entre etapas (src/estaciones/kit-objetos.js lo muestra cuando el kit se cierra y desaparece).
+  Textos del proyecto anterior (Pet Alert, src/js/data/content.js: track / trackCat). Mismo estilo de tarjeta que la bienvenida.
+    et-kick  etiqueta coral    et-title  titulo    et-text  explicacion    et-b1..et-b3  viñetas
+    et-next  boton CONTINUAR (se toca con el dedo indice). Iconos Lucide: ArrowRight.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .card {
+    flex-direction: column;
+    width: 460px;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 28px;
+    gap: 10px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .text {
+    color: #3b5683;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: #ff7a66;
+  }
+
+  .item-text {
+    color: #14305e;
+    font-size: 19px;
+    line-height: 25px;
+    flex-shrink: 1;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 32px;
+    background-color: #14305e;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #24508f;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+</style>
+<div class="card">
+  <span id="et-kick" class="num">ETAPA 2 · RASTREO</span>
+  <span id="et-title" class="title">¿Y si tu mascota se pierde?</span>
+  <span id="et-text" class="text">Con el susto de un sismo, un perro o un gato puede escaparse. Su placa, su rastreador y su microchip ayudan a encontrarlo rápido.</span>
+  <div class="list">
+    <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Placa de identificación: su nombre y dos teléfonos de contacto.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b2" class="item-text">Rastreador GPS o Bluetooth: muestra dónde está en tu celular.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b3" class="item-text">Microchip: un veterinario lo lee y te identifica como dueño.</span></div>
+  </div>
+  <div id="et-next" class="btn">
+    <span id="et-next-label" class="btn-label">CONTINUAR</span>
+    <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
+  </div>
+</div>

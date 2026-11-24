@@ -1,0 +1,133 @@
+<!--
+  Panel de mascotas. Panel, Button, ButtonIcon y ButtonLabel vienen del kit Horizon incluido;
+  Dog, Cat, RotateCcw, RotateCw, MapPin, RectangleGoggles y LogIn son iconos Lucide incluidos.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .panel-root {
+    flex-direction: column;
+    width: 440px;
+    font-family: Barlow;
+  }
+
+  .panel-content {
+    flex-direction: column;
+    gap: 7px;
+    padding: 22px;
+  }
+
+  .eyebrow {
+    color: #6b5a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+
+  .eyebrow:dark {
+    color: #f5d90a;
+  }
+
+  .heading {
+    font-family: VarelaRound;
+    color: #1c1d20;
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .heading:dark {
+    color: #fafaf7;
+  }
+
+  .body {
+    color: #3a3b40;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .body:dark {
+    color: #dddfe3;
+  }
+
+  .row {
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 14px;
+  }
+
+  .button {
+    justify-content: flex-start;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 22px;
+  }
+
+  .button-label {
+    transform-translate-y: 1px;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div class="eyebrow">PETALERT AR</div>
+    <div class="heading">Perro y gato</div>
+    <span id="status-idle" class="body">Toca una mascota o elige una</span>
+    <span id="status-dog" class="body" style="display: none">Seleccionado: Perro</span>
+    <span id="status-cat" class="body" style="display: none">Seleccionado: Gato</span>
+  </div>
+  <div class="row">
+    <Button id="btn-dog">
+      <ButtonIcon>
+        <Dog></Dog>
+      </ButtonIcon>
+      <ButtonLabel class="button-label">Perro</ButtonLabel>
+    </Button>
+    <Button id="btn-cat">
+      <ButtonIcon>
+        <Cat></Cat>
+      </ButtonIcon>
+      <ButtonLabel class="button-label">Gato</ButtonLabel>
+    </Button>
+  </div>
+  <div class="row">
+    <Button id="btn-left">
+      <ButtonIcon>
+        <RotateCcw></RotateCcw>
+      </ButtonIcon>
+      <ButtonLabel class="button-label">Girar</ButtonLabel>
+    </Button>
+    <Button id="btn-right">
+      <ButtonIcon>
+        <RotateCw></RotateCw>
+      </ButtonIcon>
+      <ButtonLabel class="button-label">Girar</ButtonLabel>
+    </Button>
+    <Button id="btn-place">
+      <ButtonIcon>
+        <MapPin></MapPin>
+      </ButtonIcon>
+      <ButtonLabel class="button-label">Colocar</ButtonLabel>
+    </Button>
+  </div>
+  <Button id="exit-button" class="button">
+    <ButtonIcon>
+      <LogIn></LogIn>
+    </ButtonIcon>
+    <ButtonLabel class="button-label">Salir de AR</ButtonLabel>
+  </Button>
+</Panel>

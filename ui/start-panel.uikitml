@@ -1,0 +1,103 @@
+<!--
+  Pantalla previa, FUERA de AR (el navegador exige un toque para entrar en realidad aumentada): solo el logo y ENTRAR.
+  Todo lo demas (logo animado y bienvenida) ocurre ya dentro de AR, sobre el espacio real: src/estaciones/intro-screen.js.
+  Estilo de las tarjetas del proyecto anterior. El logo es public/ui/logo.png. Iconos Lucide: ArrowRight.
+    start-button  entra en AR      start-unsupported  aviso si el dispositivo no tiene AR
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    width: 420px;
+    padding-top: 26px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 28px;
+    gap: 14px;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .logo-box {
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 22px;
+    background-color: #4a8bdd;
+  }
+
+  .logo {
+    width: 240px;
+    height: 163px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .warning {
+    color: #c2412f;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 360px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 32px;
+    background-color: #ff7a66;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #f2604a;
+  }
+
+  .btn-label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+</style>
+<div class="card">
+  <div class="logo-box">
+    <img class="logo" src="./ui/logo.png" />
+  </div>
+  <span class="title">Cuida a tus mascotas</span>
+  <span id="start-unsupported" class="warning" style="display: none">Este dispositivo no es compatible con realidad aumentada. Abre este enlace en un Meta Quest.</span>
+  <div id="start-button" class="btn">
+    <span class="btn-label">ENTRAR</span>
+    <ArrowRight width="22" height="22" color="#ffffff"></ArrowRight>
+  </div>
+</div>

@@ -1,0 +1,358 @@
+{
+  "components": {
+    "com.iwsdk.components.IBLGradient": {
+      "equator": [
+        0.8,
+        0.76,
+        0.7,
+        1
+      ],
+      "ground": [
+        0.46,
+        0.42,
+        0.38,
+        1
+      ],
+      "intensity": 0.6,
+      "sky": [
+        0.96,
+        0.94,
+        0.9,
+        1
+      ]
+    }
+  },
+  "environment": {
+    "exposure": 1,
+    "shadows": true,
+    "toneMapping": "aces",
+    "shadowMapType": "pcf"
+  },
+  "nodes": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "components": {
+                "ContactShadow": {
+                  "color": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "height": 0.0016,
+                  "opacity": 0.4,
+                  "size": [
+                    1.1,
+                    1.3
+                  ]
+                }
+              },
+              "id": "dog-contact",
+              "name": "Sombra del perro",
+              "transform": {
+                "position": [
+                  0,
+                  0.002,
+                  0
+                ]
+              }
+            }
+          ],
+          "components": {
+            "AudioSource": {
+              "maxInstances": 2,
+              "playbackMode": "fade-restart",
+              "src": "./audio/ladrando.mp3"
+            },
+            "DepthOccludable": {},
+            "Pet": {
+              "kind": "dog"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "content": {
+            "asset": "dog",
+            "type": "asset"
+          },
+          "id": "dog",
+          "name": "Perro",
+          "transform": {
+            "position": [
+              -0.5,
+              0,
+              0
+            ],
+            "rotationDeg": [
+              0,
+              15,
+              0
+            ]
+          }
+        },
+        {
+          "children": [
+            {
+              "components": {
+                "ContactShadow": {
+                  "color": [
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "height": 0.0016,
+                  "opacity": 0.4,
+                  "size": [
+                    0.8,
+                    0.9
+                  ]
+                }
+              },
+              "id": "cat-contact",
+              "name": "Sombra del gato",
+              "transform": {
+                "position": [
+                  0,
+                  0.002,
+                  0
+                ]
+              }
+            }
+          ],
+          "components": {
+            "AudioSource": {
+              "maxInstances": 2,
+              "playbackMode": "fade-restart",
+              "src": "./audio/maullido.mp3"
+            },
+            "DepthOccludable": {},
+            "Pet": {
+              "kind": "cat"
+            },
+            "RayInteractable": {},
+            "PokeInteractable": {}
+          },
+          "content": {
+            "asset": "cat",
+            "type": "asset"
+          },
+          "id": "cat",
+          "name": "Gato",
+          "transform": {
+            "position": [
+              0.45,
+              0,
+              0
+            ],
+            "rotationDeg": [
+              0,
+              -15,
+              0
+            ]
+          }
+        }
+      ],
+      "components": {
+        "PetsRoot": {}
+      },
+      "framingRole": "support",
+      "id": "pets-root",
+      "name": "Mascotas",
+      "transform": {
+        "position": [
+          0,
+          0,
+          -1.6
+        ]
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "start-panel",
+        "type": "asset"
+      },
+      "id": "start-panel",
+      "name": "Pantalla de inicio",
+      "transform": {
+        "position": [
+          0,
+          1.3,
+          -1
+        ],
+        "scale": 0.25
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "welcome-panel",
+        "type": "asset"
+      },
+      "id": "welcome-panel",
+      "name": "Bienvenida en AR",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
+      "content": {
+        "asset": "hint-panel",
+        "type": "asset"
+      },
+      "id": "hint-panel",
+      "name": "Indicaciones",
+      "transform": {
+        "position": [
+          0,
+          1.3,
+          -1.2
+        ],
+        "scale": 0.22
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "pet-panel",
+        "type": "asset"
+      },
+      "id": "pet-panel",
+      "name": "Panel de mascotas",
+      "transform": {
+        "position": [
+          0,
+          1.35,
+          -1.3
+        ],
+        "rotationDeg": [
+          -6,
+          0,
+          0
+        ],
+        "scale": 0.22
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "station-panel",
+        "type": "asset"
+      },
+      "id": "station-panel",
+      "name": "Panel de la estacion",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
+      "content": {
+        "asset": "item-panel",
+        "type": "asset"
+      },
+      "id": "item-panel",
+      "name": "Panel de un objeto del kit",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.1
+      }
+    },
+    {
+      "content": {
+        "asset": "toast-panel",
+        "type": "asset"
+      },
+      "id": "toast-panel",
+      "name": "Aviso guardado con exito",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.12
+      }
+    },
+    {
+      "components": {
+        "RayInteractable": {},
+        "PokeInteractable": {}
+      },
+      "content": {
+        "asset": "etapa-panel",
+        "type": "asset"
+      },
+      "id": "etapa-panel",
+      "name": "Transicion entre etapas",
+      "transform": {
+        "position": [
+          0,
+          -10,
+          0
+        ],
+        "scale": 0.16
+      }
+    },
+    {
+      "content": {
+        "asset": "escenario-mesa",
+        "type": "asset"
+      },
+      "id": "escenario-mesa",
+      "name": "Escenario: mesa (kit)",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "content": {
+        "asset": "escenario-suelo",
+        "type": "asset"
+      },
+      "id": "escenario-suelo",
+      "name": "Escenario: suelo (sala y armario)",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "resources": {},
+  "units": "meters",
+  "version": "iwsdk.scene.v1"
+}

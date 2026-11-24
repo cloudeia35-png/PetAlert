@@ -1,0 +1,54 @@
+<!--
+  Aviso corto arriba en la vista: "<objeto>: guardado con exito" (src/estaciones/kit-objetos.js lo muestra al guardar
+  un objeto en el maletin y lo desvanece a los segundos). No es interactivo.
+    toast       raiz (su opacidad se anima)      toast-text  el mensaje
+  Estilo del proyecto anterior: pildora clara, borde blanco, check en verde (--ok #2fa38a). Iconos Lucide: Check.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  .pill {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 26px;
+    border-radius: 40px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .ok {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #2fa38a;
+  }
+
+  .msg {
+    color: #14305e;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 28px;
+  }
+</style>
+<div id="toast" class="pill">
+  <div class="ok"><Check width="26" height="26" color="#ffffff"></Check></div>
+  <span id="toast-text" class="msg">Agua potable: guardado con éxito</span>
+</div>

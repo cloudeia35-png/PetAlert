@@ -1,0 +1,125 @@
+<!--
+  Panel de instrucciones de la estacion actual (src/estaciones/colocar-estaciones.js lo llena y lo ubica arriba de la estacion).
+  Estilo de las tarjetas del proyecto anterior (azul clarito, borde blanco, etiqueta coral, Varela Round + Barlow, pildoras).
+    st-step   "ESTACION 1 DE 1"     st-title  nombre de la estacion     st-text  instruccion breve
+    btn-move  volver a colocar la estacion     btn-next  pasar a la siguiente (btn-next-label: "Siguiente" / "Terminar")
+    btn-skip  SOLO EN DESARROLLO (npm run dev): guarda todo el kit de una vez para probar lo que sigue
+  El nodo de la escena lleva PokeInteractable y RayInteractable. Iconos Lucide: Move, ArrowRight.
+-->
+<style>
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_400Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(../fonts/Barlow_700Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: VarelaRound;
+    src: url(../fonts/VarelaRound_400Regular.ttf);
+  }
+
+  .card {
+    flex-direction: column;
+    width: 440px;
+    padding-top: 24px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 22px;
+    gap: 8px;
+    border-radius: 26px;
+    border-width: 3px;
+    border-color: #ffffff;
+    background-color: #dcebfb;
+    font-family: Barlow;
+  }
+
+  .num {
+    color: #ff7a66;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .title {
+    font-family: VarelaRound;
+    color: #14305e;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .text {
+    color: #3b5683;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 28px;
+    background-color: #14305e;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #24508f;
+  }
+
+  .ghost {
+    background-color: #dcebfb;
+    border-width: 2px;
+    border-color: #a9bcd8;
+  }
+
+  .ghost:hover {
+    background-color: #c9ddf5;
+  }
+
+  .label {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .ghost-label {
+    color: #14305e;
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+<div class="card">
+  <span id="st-step" class="num">ESTACIÓN 1 DE 1</span>
+  <span id="st-title" class="title">Kit de emergencia</span>
+  <span id="st-text" class="text">Toca un objeto para ver para qué sirve.</span>
+  <div class="row">
+    <div id="btn-move" class="btn ghost">
+      <Move width="20" height="20" color="#14305e"></Move>
+      <span class="ghost-label">Mover</span>
+    </div>
+    <div id="btn-skip" class="btn ghost" style="display: none">
+      <span class="ghost-label">Saltar</span>
+    </div>
+    <div id="btn-next" class="btn">
+      <span id="btn-next-label" class="label">Siguiente</span>
+      <ArrowRight width="20" height="20" color="#ffffff"></ArrowRight>
+    </div>
+  </div>
+</div>
