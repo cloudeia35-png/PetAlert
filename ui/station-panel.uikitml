@@ -122,6 +122,17 @@
   <span id="st-step" class="num">ESTACIÓN 1 DE 1</span>
   <span id="st-title" class="title">Kit de emergencia</span>
   <span id="st-text" class="text">Toca un objeto para ver para qué sirve.</span>
+  <div id="tuto-mano" style="display: none; flex-direction: row; align-items: center; justify-content: center; gap: 14px; padding-top: 6px; padding-bottom: 6px">
+    <div id="tuto-abierta" style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+      <Hand width="46" height="46" color="#14305e"></Hand>
+      <span class="text">Abre la mano</span>
+    </div>
+    <ArrowRight width="26" height="26" color="#ff7a66"></ArrowRight>
+    <div id="tuto-cerrada" style="display: flex; flex-direction: column; align-items: center; gap: 4px">
+      <Grab width="46" height="46" color="#ff7a66"></Grab>
+      <span class="text">Ciérrala para agarrar</span>
+    </div>
+  </div>
   <div class="row">
     <div id="btn-move" class="round">
       <Move width="22" height="22" color="#14305e"></Move>
