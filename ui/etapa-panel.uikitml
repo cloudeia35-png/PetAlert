@@ -129,11 +129,11 @@
 <div class="card">
   <div class="head"><span id="et-kick" class="num">ETAPA 2 · RASTREO</span><div id="move-etapa" class="round"><Move width="22" height="22" color="#14305e"></Move></div></div>
   <span id="et-title" class="title">¿Y si tu mascota se pierde?</span>
-  <span id="et-text" class="text">Con el susto de un sismo, un perro o un gato puede escaparse. Su placa, su rastreador y su microchip ayudan a encontrarlo rápido.</span>
+  <span id="et-text" class="text">Tras un sismo, tu mascota puede escapar. Esto ayuda a encontrarla:</span>
   <div class="list">
-    <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Placa de identificación: su nombre y dos teléfonos de contacto.</span></div>
-    <div class="item"><div class="dot"></div><span id="et-b2" class="item-text">Rastreador GPS o Bluetooth: muestra dónde está en tu celular.</span></div>
-    <div class="item"><div class="dot"></div><span id="et-b3" class="item-text">Microchip: un veterinario lo lee y te identifica como dueño.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b1" class="item-text">Placa: nombre y teléfonos.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b2" class="item-text">Rastreador: su ubicación en tu celular.</span></div>
+    <div class="item"><div class="dot"></div><span id="et-b3" class="item-text">Microchip: te identifica como dueño.</span></div>
   </div>
   <div id="et-next" class="btn">
     <span id="et-next-label" class="btn-label">CONTINUAR</span>
